@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Войти на сайт</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Войдите в ваш аккаунт</h1>
+    <form method="POST">
+        <label>Имя:</label> <br>
+        <input type="text" name="username" required><br>
+        <label>Пароль:</label><br>
+        <input type="password" name="password" required><br>
+        <button type="login_in_account">Войти</button><br>
+        {% if message %}
+            <p class="message">{{message}}</p>
+        {% endif %}
+
+    </form>
+    <a href="/authorization/" class="btn"> У вас нет аккаунта? Зарегистрироватся</a>
+    <div class="buttons">
+        <a href=> У вас уже есть аккаунт? Войти в него</a>
+    </div>
+</body>
+</html>

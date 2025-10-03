@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Блог</title>
+    <link rel="stylesheet" href="/static/blog.css">
+</head>
+<body>
+    <div class="card">
+        <div class="post">
+            <h1>{{post.title}}</h1>
+            <p>{{post.text}}</p>
+            <p>{{post.author}}</p>
+            {% if current_user.id == post.author %}
+                <form method="POST"
+                action="{{ url_for('del_post', post_id=post.id)}}">
+                    <button type="submit">Удалить пост</button>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+    <p class="telegram"> Подпишсь кстати на <br><a href="https://t.me/Lenikslonik20"> Телеграмм-канал</a> </p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Создайте новый аккаунт</h1>
+    <form method="POST">
+        <label>Имя:</label> <br>
+        <input type="text" name="username" required><br>
+        <label>Пароль:</label><br>
+        <input type="password" name="password" required><br>
+        <button type="create_account">Зарегистрироватся</button><br>
+        {% if message %}
+            <p class="message">{{message}}</p>
+        {% endif %}
+    </form>
+    <div class="buttons">
+        <a href=> У вас уже есть аккаунт? Войти в него</a>
+    </div>
+</body>
+</html>
